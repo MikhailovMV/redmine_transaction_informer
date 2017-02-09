@@ -21,7 +21,7 @@ require 'net/http'
     module InstanceMethods
       def send_request_to_control
         data_to_send = ["issueid" => self.id, "userid" => self.author_id, "datetime" => self.created_on]
-        Net::HTTP.get('profit-lab.top', '/htmls/counter.php?id=' + data_to_send.to_json)
+        Net::HTTP.get(Setting.plugin_redmine_transaction_informer['domain'],  Setting.plugin_redmine_transaction_informer['url'] + '?id=' + data_to_send.to_json)
         return true
       end
 
