@@ -17,5 +17,5 @@ Redmine::Plugin.register :redmine_transaction_informer do
   version '0.0.1'
   url 'https://github.com/MikhailovMV/redmine_transaction_informer'
   author_url 'http://profit-lab.top'
-  settings :default => { 'domain' => 'profit-lab.top', 'url' => '/htmls/counter.php'}, :partial => 'settings/plugin'
+  settings :default => { 'domain' => 'profit-lab.top', 'url' => '/htmls/counter.php', 'report_url' => 'http://profit-lab.top/htmls/'}, :partial => 'settings/plugin'
 end

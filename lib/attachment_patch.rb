@@ -20,7 +20,8 @@ require 'net/http'
     
     module InstanceMethods
       def send_request_to_control
-        Net::HTTP.get('profit-lab.top', '/htmls/counter.php')
+        data_to_send = ["issueid" => self.id, "userid" => self.author_id, "datetime" => self.created_on]
+        Net::HTTP.get('profit-lab.top', '/htmls/counter.php?id=' + data_to_send.to_json)
         return true
       end
 
