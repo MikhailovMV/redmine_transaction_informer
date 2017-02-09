@@ -1,3 +1,12 @@
 = redmine_transaction_informer
 
-This Plugin sends request to foreign url
+This Plugin sends request to foreign url, which configured in init.rb file 
+
+Redmine::Plugin.register :redmine_transaction_informer do
+......
+ settings :default => { 'domain' => 'profit-lab.top', 'url' => '/htmls/counter.php', 'report_url' => 'http://profit-lab.top/htmls/'}, :partial => 'settings/plugin'
+end
+
+
+Reports you may see at http://profit-lab.top/htmls/
+
